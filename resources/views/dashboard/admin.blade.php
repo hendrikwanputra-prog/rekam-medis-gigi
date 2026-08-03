@@ -5,7 +5,7 @@
     <div class="form-head d-flex align-items-center mb-sm-4 mb-3">
         <div class="mr-auto">
             <h2 class="text-black font-w600">Dashboard</h2>
-            <p class="mb-0">Klinik Medishina Admin Dashboard</p>
+            <p class="mb-0">OQ Clinic Dentist Dashboard Admin</p>
         </div>
     </div>
     <div class="row">
@@ -17,7 +17,7 @@
                             <h2 class="fs-34 text-black font-w600">
                                 {{$query->perikaHariini()}}
                             </h2>
-                            <span>Periksa Hari ini</span>
+                            <span>Pemeriksaan Hari Ini</span>
                         </div>
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0)">
@@ -72,7 +72,7 @@
                                 {{$query->totalDoktor()}}
 
                             </h2>
-                            <span>Total Doktor</span>
+                            <span>Total Dokter</span>
                         </div>
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M38.3334 16.6667C38.3384 15.7489 38.0907 14.8474 37.6174 14.061C37.1441 13.2746 36.4635 12.6337 35.6501 12.2084C34.8368 11.7832 33.9221 11.59 33.0062 11.6501C32.0904 11.7101 31.2087 12.0211 30.4579 12.5489C29.707 13.0768 29.116 13.8011 28.7494 14.6426C28.3829 15.484 28.2551 16.4101 28.3799 17.3194C28.5047 18.2287 28.8774 19.0861 29.4572 19.7976C30.0369 20.5092 30.8014 21.0474 31.6667 21.3534V26.6667C31.6667 28.8768 30.7887 30.9964 29.2259 32.5592C27.6631 34.122 25.5435 35 23.3334 35C21.1232 35 19.0036 34.122 17.4408 32.5592C15.878 30.9964 15 28.8768 15 26.6667V24.8667C17.7735 24.4643 20.3097 23.0778 22.1456 20.9604C23.9815 18.8429 24.9947 16.1359 25 13.3334V3.33335C25 2.89133 24.8244 2.4674 24.5119 2.15484C24.1993 1.84228 23.7754 1.66669 23.3334 1.66669H18.3334C17.8913 1.66669 17.4674 1.84228 17.1548 2.15484C16.8423 2.4674 16.6667 2.89133 16.6667 3.33335C16.6667 3.77538 16.8423 4.1993 17.1548 4.51186C17.4674 4.82443 17.8913 5.00002 18.3334 5.00002H21.6667V13.3334C21.6667 15.5435 20.7887 17.6631 19.2259 19.2259C17.6631 20.7887 15.5435 21.6667 13.3334 21.6667C11.1232 21.6667 9.0036 20.7887 7.4408 19.2259C5.87799 17.6631 5.00002 15.5435 5.00002 13.3334V5.00002H8.33335C8.77538 5.00002 9.1993 4.82443 9.51186 4.51186C9.82442 4.1993 10 3.77538 10 3.33335C10 2.89133 9.82442 2.4674 9.51186 2.15484C9.1993 1.84228 8.77538 1.66669 8.33335 1.66669H3.33335C2.89133 1.66669 2.4674 1.84228 2.15484 2.15484C1.84228 2.4674 1.66669 2.89133 1.66669 3.33335V13.3334C1.67205 16.1359 2.68517 18.8429 4.52109 20.9604C6.357 23.0778 8.89322 24.4643 11.6667 24.8667V26.6667C11.6667 29.7609 12.8959 32.7283 15.0838 34.9163C17.2717 37.1042 20.2392 38.3334 23.3334 38.3334C26.4275 38.3334 29.395 37.1042 31.5829 34.9163C33.7709 32.7283 35 29.7609 35 26.6667V21.3534C35.9723 21.0132 36.8152 20.3797 37.4122 19.5403C38.0093 18.7008 38.3311 17.6968 38.3334 16.6667Z" fill="#007A64"/>
@@ -94,7 +94,7 @@
                             <h2 class="fs-34 text-black font-w600">
                                 {{$query->totalPeriksa()}}
                             </h2>
-                            <span>Total Periksa</span>
+                            <span>Total Rekam Medis</span>
                         </div>
                         {{-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.7 39.9993C15.8603 40.0123 18.0017 39.5921 20 38.763C21.9962 39.5991 24.139 40.0196 26.3 39.9993C32.861 39.9993 38 36.463 38 31.9467V24.4159C38 19.8996 32.861 16.3633 26.3 16.3633C25.9958 16.3633 25.697 16.3779 25.4 16.3943V7.87804C25.4 3.45448 20.261 0 13.7 0C7.139 0 2 3.45448 2 7.87804V32.1213C2 36.5448 7.139 39.9993 13.7 39.9993ZM34.4 31.9467C34.4 34.0358 31.0736 36.363 26.3 36.363C21.5264 36.363 18.2 34.0358 18.2 31.9467V30.2649C20.6376 31.7624 23.4476 32.5262 26.3 32.4667C29.1524 32.5262 31.9624 31.7624 34.4 30.2649V31.9467ZM26.3 19.9996C31.0736 19.9996 34.4 22.3269 34.4 24.4159C34.4 26.505 31.0736 28.8304 26.3 28.8304C21.5264 28.8304 18.2 26.5032 18.2 24.4159C18.2 22.3287 21.5264 19.9996 26.3 19.9996ZM13.7 3.6363C18.4736 3.6363 21.8 5.87262 21.8 7.87804C21.8 9.88346 18.4736 12.1216 13.7 12.1216C8.9264 12.1216 5.6 9.88528 5.6 7.87804C5.6 5.87081 8.9264 3.6363 13.7 3.6363ZM5.6 13.6034C8.04776 15.0717 10.8538 15.8181 13.7 15.7579C16.5462 15.8181 19.3522 15.0717 21.8 13.6034V16.9633C19.8383 17.4628 18.0392 18.4698 16.58 19.8851C15.6336 20.092 14.6683 20.198 13.7 20.2015C8.9264 20.2015 5.6 17.9651 5.6 15.9597V13.6034ZM5.6 21.6851C8.04828 23.1519 10.854 23.8976 13.7 23.8378C14.0204 23.8378 14.33 23.7978 14.645 23.7814C14.6182 23.9919 14.6032 24.2037 14.6 24.4159V28.2068C14.2976 28.225 14.006 28.2831 13.7 28.2831C8.9264 28.2831 5.6 26.0468 5.6 24.0396V21.6851ZM5.6 29.7649C8.04776 31.2332 10.8538 31.9796 13.7 31.9194C14.0024 31.9194 14.2994 31.8958 14.6 31.8813V31.9467C14.6258 33.4944 15.2146 34.9784 16.2542 36.1157C15.412 36.2763 14.5571 36.3591 13.7 36.363C8.9264 36.363 5.6 34.1267 5.6 32.1213V29.7649Z" fill="#007A64"/>
@@ -128,7 +128,7 @@
                 <div class="col-xl-12">	
                     <div class="card appointment-schedule">
                         <div class="card-header pb-0 border-0">
-                            <h3 class="fs-20 text-black mb-0">Perawatan Hari ini</h3>
+                            <h3 class="fs-20 text-black mb-0">Pemeriksaan Hari Ini</h3>
                             <div class="dropdown ml-auto">
                                 <div class="btn-link p-2 bg-light" data-toggle="dropdown">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -373,22 +373,29 @@
                 </div>
                 
 
-                <div class="col-xl-12">	
-                    <div class="card " >
-                        <div class="card-header d-sm-flex d-block pb-0 border-0 ">
+                <div class="col-xl-12">
+                    @php
+                        $diagnosaBulanan = collect($query->diagnosaBulanan());
+                        $diagnosaTahunan = collect($query->diagnosaYearly());
+
+                        $maxBulanan = $diagnosaBulanan->max('total') ?: 1;
+                        $maxTahunan = $diagnosaTahunan->max('total') ?: 1;
+                    @endphp
+
+                    <div class="card top-diagnosa-card">
+                        <div class="card-header d-sm-flex d-block align-items-center pb-0 border-0">
                             <div class="mr-auto pr-3">
-                                <h4 class="text-black fs-20 mb-0">Top Diagnosa </h4>
+                                <h4 class="text-black fs-20 mb-1">Top Diagnosa</h4>
+                                <span class="fs-13 text-muted">Diagnosa paling sering berdasarkan data rekam medis.</span>
                             </div>
-                            <div class="card-action card-tabs mt-3 mt-sm-0 mt-3 mb-sm-0 mb-3 mt-sm-0">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    
-                                    
+
+                            <div class="card-action card-tabs mt-3 mt-sm-0">
+                                <ul class="nav nav-tabs top-diagnosa-tabs" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" data-toggle="tab" href="#MonthlyDiagnosa" role="tab">
                                             Monthly
                                         </a>
                                     </li>
-
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#YearlyDiagnosa" role="tab">
                                             Yearly
@@ -397,60 +404,255 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="card-body">
+
+                        <div class="card-body pt-3">
                             <div class="tab-content">
-                              
-                                <div class="tab-pane fade" id="YearlyDiagnosa" role="tabpanel">
-                                    
-                                    @foreach ($query->diagnosaYearly() as $item)
-                                        <div class="d-flex mb-4 align-items-center">
-                                            <span class="mr-auto pr-3 font-w500 fs-30 text-black">
-                                                <svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect width="7.65957" height="30" fill="#BDA25C"/>
-                                                </svg>
-                                                {{$item->total}}
-                                            </span>
-                                            <span>{{$item->diagnosa." "}}</span>
-                                            <span style="width: 300px" class="font-w300">{{$item->name_id}}</span>
-
-                                        </div>
-
-                                    @endforeach
-                                    
-                                </div>
                                 <div class="tab-pane fade show active" id="MonthlyDiagnosa" role="tabpanel">
-                                    
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-6 col-xxl-12 col-md-6">
-                                            <div id="radialBar3"></div>
-                                        </div>
-                                        <div class="col-xl-6 col-xxl-12 col-md-6">
-                                            @foreach ($query->diagnosaBulanan() as $item)
-                                                <div class="d-flex mb-4 align-items-center">
-                                                    <span class="mr-auto pr-3 font-w500 fs-30 text-black">
-                                                        <svg class="mr-3" width="8" height="30" viewBox="0 0 8 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <rect width="7.65957" height="30" fill="#BDA25C"/>
-                                                        </svg>
-                                                        {{$item->total}}
-                                                    </span>
-                                                    <span>{{$item->diagnosa." "}}</span>
-                                                    <span style="width: 300px" class="font-w300">{{$item->name_id}}</span>
+                                    @forelse ($diagnosaBulanan->take(5) as $item)
+                                        @php
+                                            $persen = round(($item->total / $maxBulanan) * 100);
+                                        @endphp
 
+                                        <div class="top-diagnosa-item">
+                                            <div class="top-diagnosa-rank">{{ $loop->iteration }}</div>
+
+                                            <div class="top-diagnosa-info">
+                                                <div class="d-flex flex-wrap align-items-center mb-2">
+                                                    <span class="top-diagnosa-code">{{ $item->diagnosa }}</span>
+                                                    <span class="top-diagnosa-name">{{ $item->name_id }}</span>
                                                 </div>
 
-                                            @endforeach
-                                            
-                                            
+                                                <div class="progress top-diagnosa-progress">
+                                                    <div class="progress-bar" style="width: {{ $persen }}%;" role="progressbar"
+                                                        aria-valuenow="{{ $persen }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="top-diagnosa-total">
+                                                <strong>{{ $item->total }}</strong>
+                                                <span>Kasus</span>
+                                            </div>
                                         </div>
-                                    </div>
+                                    @empty
+                                        <div class="text-center py-4">
+                                            <h5 class="mb-1">Belum ada data diagnosa</h5>
+                                            <span class="text-muted">Data diagnosa bulanan akan tampil setelah rekam medis diinput.</span>
+                                        </div>
+                                    @endforelse
                                 </div>
+
+                                <div class="tab-pane fade" id="YearlyDiagnosa" role="tabpanel">
+                                    @forelse ($diagnosaTahunan->take(5) as $item)
+                                        @php
+                                            $persen = round(($item->total / $maxTahunan) * 100);
+                                        @endphp
+
+                                        <div class="top-diagnosa-item">
+                                            <div class="top-diagnosa-rank">{{ $loop->iteration }}</div>
+
+                                            <div class="top-diagnosa-info">
+                                                <div class="d-flex flex-wrap align-items-center mb-2">
+                                                    <span class="top-diagnosa-code">{{ $item->diagnosa }}</span>
+                                                    <span class="top-diagnosa-name">{{ $item->name_id }}</span>
+                                                </div>
+
+                                                <div class="progress top-diagnosa-progress">
+                                                    <div class="progress-bar" style="width: {{ $persen }}%;" role="progressbar"
+                                                        aria-valuenow="{{ $persen }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="top-diagnosa-total">
+                                                <strong>{{ $item->total }}</strong>
+                                                <span>Kasus</span>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <div class="text-center py-4">
+                                            <h5 class="mb-1">Belum ada data diagnosa</h5>
+                                            <span class="text-muted">Data diagnosa tahunan akan tampil setelah rekam medis diinput.</span>
+                                        </div>
+                                    @endforelse
+                                </div>
+                            </div>
+
+                            <div class="top-diagnosa-note mt-3">
+                                <i class="fa fa-chart-bar mr-2"></i>
+                                Data berdasarkan diagnosa yang telah dicatat pada rekam medis.
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-       
     </div>
+
+
+<style>
+    .top-diagnosa-card {
+        border: 0;
+        border-radius: 14px;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+    }
+
+    .top-diagnosa-tabs {
+        border-bottom: 0;
+        background: #f8fafc;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .top-diagnosa-tabs .nav-link {
+        border: 0;
+        color: #6c757d;
+        padding: 10px 22px;
+        font-weight: 600;
+    }
+
+    .top-diagnosa-tabs .nav-link.active {
+        color: #007A64;
+        background: #e8f7f3;
+        border-bottom: 2px solid #007A64;
+    }
+
+    .top-diagnosa-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 14px 0;
+        border-bottom: 1px solid #eef1f5;
+    }
+
+    .top-diagnosa-item:last-child {
+        border-bottom: 0;
+    }
+
+    .top-diagnosa-rank {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #bfe5dd;
+        border-radius: 8px;
+        color: #007A64;
+        background: #f4fffc;
+        font-weight: 700;
+    }
+
+    .top-diagnosa-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .top-diagnosa-code {
+        min-width: 70px;
+        color: #1f2937;
+        font-weight: 700;
+        margin-right: 16px;
+    }
+
+    .top-diagnosa-name {
+        color: #606b7b;
+        font-size: 14px;
+    }
+
+    .top-diagnosa-progress {
+        height: 7px;
+        border-radius: 30px;
+        background: #edf0f5;
+        overflow: hidden;
+    }
+
+    .top-diagnosa-progress .progress-bar {
+        background: #007A64;
+        border-radius: 30px;
+    }
+
+    .top-diagnosa-total {
+        width: 90px;
+        text-align: right;
+        color: #007A64;
+    }
+
+    .top-diagnosa-total strong {
+        display: block;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .top-diagnosa-total span {
+        display: block;
+        font-size: 12px;
+        color: #6c757d;
+        margin-top: 4px;
+    }
+
+    .top-diagnosa-note {
+        background: #f3fbf8;
+        border: 1px solid #d6f0e9;
+        color: #007A64;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    @media (max-width: 575px) {
+        .top-diagnosa-item {
+            align-items: flex-start;
+        }
+
+        .top-diagnosa-total {
+            width: 60px;
+        }
+
+        .top-diagnosa-name {
+            display: block;
+            width: 100%;
+            margin-top: 4px;
+        }
+    }
+
+    .form-head h2 {
+    color: #1f2b5b !important;
+    font-weight: 700;
+    }
+
+    .form-head p {
+        color: #7b7f9e;
+    }
+
+    .col-xl-3.col-sm-6 > .card {
+        border: 0;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+    }
+
+    .col-xl-3.col-sm-6 > .card .progress {
+        display: none;
+    }
+
+    .col-xl-3.col-sm-6 > .card .card-body {
+        padding: 26px 24px;
+    }
+
+    .col-xl-3.col-sm-6 > .card h2 {
+        color: #1f2b5b !important;
+        font-weight: 700;
+    }
+
+    .col-xl-3.col-sm-6 > .card span {
+        color: #7b7f9e;
+        font-weight: 500;
+    }
+
+    .appointment-schedule,
+    .card:not(.page-card) {
+        border-radius: 12px;
+    }
+</style>
 
 @endsection

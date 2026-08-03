@@ -98,52 +98,58 @@ class DashboardQuery
         return Dokter::where('status',1)->count();
     }
 
-    public function diagnosaBulanan(){
-      $filterBulan = date('Y-m');
-      $data=  DB::select('
-            select aa.*,ic.name_id from(
-            select diagnosa, count(diagnosa) as total
+   public function diagnosaBulanan(){
+    $filterBulan = date('Y-m');
+    $data = DB::select('
+        select aa.*, ic.name_id from (
+            select sc.diagnosa, count(sc.diagnosa) as total
             from (
-           
-            select diagnosa
-            from rekam_diagnosa a 
-            LEFT JOIN rekam r ON r.id = a.rekam_id
-            where diagnosa is not null
-            and r.tgl_rekam LIKE "%'.$filterBulan.'%"
+                select a.diagnosa as diagnosa
+                from rekam_diagnosa a
+                left join rekam r on r.id = a.rekam_id
+                where a.diagnosa is not null
+                and r.tgl_rekam LIKE "%'.$filterBulan.'%"
 
-            union all
-            select diagnosa
-            from rekam_gigi 
-            where created_at LIKE "%'.$filterBulan.'%"
-        ) sc
-        group by diagnosa)aa 
+                union all
+
+                select rg.diagnosa as diagnosa
+                from rekam_gigi rg
+                where rg.created_at LIKE "%'.$filterBulan.'%"
+            ) sc
+            group by sc.diagnosa
+        ) aa
         left join icds ic on ic.code = aa.diagnosa
-        order by total desc limit 10');
-        return $data;
-    }
+        order by total desc
+        limit 10
+    ');
+    return $data;
+}
     public function diagnosaYearly(){
-        $filter = date('Y-');
-        $data=  DB::select('
-              select aa.*,ic.name_id from(
-              select diagnosa, count(diagnosa) as total
-              from (
-             
-              select diagnosa
-              from rekam_diagnosa a
-              LEFT JOIN rekam r ON r.id = a.rekam_id
-              where diagnosa is not null
-              and r.tgl_rekam LIKE "%'.$filter.'%"
-  
-              union all
-              select diagnosa
-              from rekam_gigi 
-              where created_at LIKE "%'.$filter.'%"
-          ) sc
-          group by diagnosa)aa 
-          left join icds ic on ic.code = aa.diagnosa
-          order by total desc limit 10');
-          return $data;
-      }
+    $filter = date('Y-');
+    $data = DB::select('
+        select aa.*, ic.name_id from (
+            select sc.diagnosa, count(sc.diagnosa) as total
+            from (
+                select a.diagnosa as diagnosa
+                from rekam_diagnosa a
+                left join rekam r on r.id = a.rekam_id
+                where a.diagnosa is not null
+                and r.tgl_rekam LIKE "%'.$filter.'%"
+
+                union all
+
+                select rg.diagnosa as diagnosa
+                from rekam_gigi rg
+                where rg.created_at LIKE "%'.$filter.'%"
+            ) sc
+            group by sc.diagnosa
+        ) aa
+        left join icds ic on ic.code = aa.diagnosa
+        order by total desc
+        limit 10
+    ');
+    return $data;
+}
     function rekam_day(){
         $user = auth()->user();
         $role = $user->role_display();

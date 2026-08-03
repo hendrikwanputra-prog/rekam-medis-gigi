@@ -26,8 +26,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // Paginator::useBootstrapThree();
-        date_default_timezone_set('Asia/Singapore');
+        Paginator::useBootstrap();
 
+        date_default_timezone_set('Asia/Singapore');
     }
 }

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Obat;
 use App\Models\PengeluaranObat;
 use Carbon\Carbon;

@@ -25,17 +25,28 @@ class PengeluaranObatController extends Controller
         return view('obat.resep',compact('datas'));
     }
 
-    public function pengeluaran(Request $request,$rekam_id)
+    public function pengeluaran(Request $request, $rekam_id)
     {
-        $rekam = Rekam::find($rekam_id);
-        $pasien = Pasien::find($rekam->pasien_id);
-        $pengeluaran = PengeluaranObat::where('rekam_id',$rekam_id)->whereNull('deleted_at')->get();
-        if($rekam){
-            auth()->user()->notifications->where('data.no_rekam',$rekam->no_rekam)->markAsRead();
-        }
-        return view('obat.pengeluaran',compact('rekam','pasien','pengeluaran'));
-    }
+        $rekam = Rekam::findOrFail($rekam_id);
+        $pasien = Pasien::findOrFail($rekam->pasien_id);
 
+        $pengeluaran = PengeluaranObat::where('rekam_id', $rekam_id)
+            ->whereNull('deleted_at')
+            ->get();
+
+        $obats = Obat::whereNull('deleted_at')
+            ->where('stok', '>', 0)
+            ->orderBy('nama', 'asc')
+            ->get();
+
+        if ($rekam) {
+            auth()->user()->notifications
+                ->where('data.no_rekam', $rekam->no_rekam)
+                ->markAsRead();
+        }
+
+        return view('obat.pengeluaran', compact('rekam', 'pasien', 'pengeluaran', 'obats'));
+    }
     public function riwayat(Request $request)
     {
         $datas = PengeluaranObat::latest()

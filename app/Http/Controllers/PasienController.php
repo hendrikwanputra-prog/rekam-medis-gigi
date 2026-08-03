@@ -43,18 +43,23 @@ class PasienController extends Controller
         })->rawColumns(['action'])->toJson();
     }
 
-    public function index(Request $request)
-    {
-        $datas = Pasien::whereNull('deleted_at')
-                ->when($request->keyword, function ($query) use ($request) {
-                    $query->where('no_rm', 'LIKE', "%{$request->keyword}%")
-                        ->orWhere('nama', 'LIKE', "%{$request->keyword}%")
-                        ->orWhere('no_bpjs', 'LIKE', "%{$request->keyword}%")
-                        ->orWhere('no_hp', 'LIKE', "%{$request->keyword}%")
-                        ->orWhere('alamat_lengkap', 'LIKE', "%{$request->keyword}%");
-                })->paginate(10);
-        return view('pasien.index',compact('datas'));
-    }
+   public function index(Request $request)
+{
+    $datas = Pasien::whereNull('deleted_at')
+        ->when($request->keyword, function ($query) use ($request) {
+            $query->where(function ($q) use ($request) {
+                $q->where('no_rm', 'LIKE', "%{$request->keyword}%")
+                    ->orWhere('nama', 'LIKE', "%{$request->keyword}%")
+                    ->orWhere('no_bpjs', 'LIKE', "%{$request->keyword}%")
+                    ->orWhere('no_hp', 'LIKE', "%{$request->keyword}%")
+                    ->orWhere('alamat_lengkap', 'LIKE', "%{$request->keyword}%");
+            });
+        })
+        ->orderBy('id', 'desc')
+        ->paginate(10);
+
+    return view('pasien.index', compact('datas'));
+}
 
     function add(Request $request){
         return view('pasien.add');

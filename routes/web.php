@@ -65,7 +65,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/pasien/{id}/update', [PasienController::class, 'update'])->name('pasien.update');
 
     Route::get('/pembayaran', [PembayaranController::class, 'index'])->name('pembayaran');
-
+    Route::get('/pembayaran/{id}/edit', [PembayaranController::class, 'edit'])->name('pembayaran.edit');
+    Route::post('/pembayaran/{id}/update', [PembayaranController::class, 'update'])->name('pembayaran.update');
+    Route::get('/laporan-pembayaran', [PembayaranController::class, 'laporan'])->name('pembayaran.laporan');
+    Route::get('/pembayaran/{id}/nota', [PembayaranController::class, 'nota'])->name('pembayaran.nota');
     Route::get('/obat/json', [ObatController::class, 'data'])->name('obat.data');
     Route::get('/obat', [ObatController::class, 'index'])->name('obat');
     Route::post('/obat/store', [ObatController::class, 'store'])->name('obat.store');

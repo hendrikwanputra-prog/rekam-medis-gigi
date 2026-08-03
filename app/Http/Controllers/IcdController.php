@@ -53,7 +53,11 @@ class IcdController extends Controller
             'name_en' => 'required',
             'name_id' => 'required'
         ]);
-        Icd::create($request->all());
+       Icd::create([
+            'code' => $request->code,
+            'name_id' => $request->name_id,
+            'name_en' => $request->name_en,
+        ]);
         return redirect()->route('icd')->with('sukses','Data berhasil ditambahkan');
     }
 
